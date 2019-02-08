@@ -1,4 +1,4 @@
-﻿-﻿using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -27,16 +27,16 @@ public class Miradelpersonaje : MonoBehaviour
         if (gameObject.name == "Articulacion 1")
         {
 
-            if (estado == Estado.subiendo && gameObject.transform.eulerAngles.z >= -90f)
+            if (estado == Estado.subiendo && gameObject.transform.rotation.z >= -90f)
             {
                 _ANGULO -= 0.05f;
-                if (gameObject.transform.eulerAngles.z <= -90f)
+                if (gameObject.transform.rotation.z <= -90f)
                 {
                     estado = Estado.bajando;
                 }
 
             }
-            if (estado == Estado.bajando && gameObject.transform.eulerAngles.z <= 0f)
+            if (estado == Estado.bajando && gameObject.transform.rotation.z <= 0f)
             {
                 _ANGULO += 0.05f;
                 if (gameObject.transform.eulerAngles.z >= 0)
