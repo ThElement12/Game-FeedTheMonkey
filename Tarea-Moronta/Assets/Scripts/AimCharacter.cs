@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Miradelpersonaje : MonoBehaviour
+public class AimCharacter : MonoBehaviour
 {
     float _ANGULO = 0;
 
@@ -23,7 +23,7 @@ public class Miradelpersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0, _ANGULO));
+        //gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0, _ANGULO));
         if (gameObject.name == "Articulacion 1")
         {
 
