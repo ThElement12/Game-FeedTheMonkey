@@ -30,7 +30,7 @@ public class Miradelpersonaje : MonoBehaviour
             if (estado == Estado.subiendo && gameObject.transform.rotation.z >= -90f)
             {
                 _ANGULO -= 0.05f;
-                if (gameObject.transform.rotation.z <= -90f)
+                if (gameObject.transform.rotation.z <= -90.0f)
                 {
                     estado = Estado.bajando;
                 }
