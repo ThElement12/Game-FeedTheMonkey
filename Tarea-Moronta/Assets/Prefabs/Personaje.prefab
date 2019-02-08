@@ -502,6 +502,7 @@ GameObject:
   - component: {fileID: 5977618692332389165}
   - component: {fileID: 7685124066455819303}
   - component: {fileID: 523444640362328462}
+  - component: {fileID: 6713619641361263907}
   m_Layer: 0
   m_Name: Articulacion 1
   m_TagString: Untagged
@@ -516,7 +517,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421048645231083933}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.941, y: -1.072, z: 0.2226563}
   m_LocalScale: {x: 0.089999996, y: 0.089999996, z: 0.089999996}
   m_Children:
@@ -582,3 +583,15 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6713619641361263907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421048645231083933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be7dcad65e0eba34f916d2470b001d99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
