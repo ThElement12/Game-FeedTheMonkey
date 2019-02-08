@@ -23,23 +23,24 @@ public class Miradelpersonaje : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<Transform>().Rotate(new Vector3(0,0, _ANGULO));
-        if(gameObject.name == "Articulacion 1")
+        //gameObject.GetComponent<Transform>().Rotate(new Vector3(0,0, _ANGULO));
+        gameObject.transform.eulerAngles = new Vector3(0, 0, _ANGULO);
+        if (gameObject.name == "Articulacion 1")
         {
 
-            if (estado == Estado.subiendo && _ANGULO >= -90)
+            if (estado == Estado.subiendo && gameObject.transform.eulerAngles.z >= -90f)
             {
-                _ANGULO -= 0.05f;     
-                if(_ANGULO <= -90)
+                _ANGULO -= 0.05f;
+                if (gameObject.transform.eulerAngles.z <= -90f)
                 {
                     estado = Estado.bajando;
                 }
                 
             } 
-            if(estado == Estado.bajando && _ANGULO <= 0)
+            if(estado == Estado.bajando && gameObject.transform.eulerAngles.z <= 0f)
             {
                 _ANGULO += 0.05f;
-                if(_ANGULO >= 0)
+                if(gameObject.transform.eulerAngles.z >= 0)
                 {
                     estado = Estado.subiendo;
                 }
