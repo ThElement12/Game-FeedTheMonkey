@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class KillCode : MonoBehaviour
 {
-    public void OnTriggerEnter(Collider other)
+    public void OnCollisionEnter(Collision collision)
     {
-        if (other.gameObject.tag == "Banana")
+        if(collision.gameObject.tag == "Banana")
         {
-            Destroy(other.gameObject);
-            
+            Destroy(collision.gameObject);
+            Destroy(GameObject.Find("Monkey"));
         }
     }
 }
