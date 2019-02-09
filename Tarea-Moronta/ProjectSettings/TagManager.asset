@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Banana
   - Arm
+  - Head
+  - Body
   layers:
   - Default
   - TransparentFX
