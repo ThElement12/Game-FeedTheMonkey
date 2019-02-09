@@ -35,9 +35,9 @@ public class Disparar : MonoBehaviour
         //Vector3 dir = Quaternion.AngleAxis(miPadre.transform.rotation.z, Vector3.forward) * Vector3.right;
 
 
-        banana.GetComponent<Rigidbody>().AddForce(BSpeedX* gameObject.transform.position.x * -1, BSpeedY* gameObject.transform.position.y * 45, gameObject.transform.position.z, ForceMode.Impulse);
-       /* banana.GetComponent<Rigidbody>().AddForce(Quaternion.AngleAxis(miPadre.transform.rotation.z, new Vector3(miPadre.transform.localPosition.x, miPadre.transform.localPosition.y)) * new Vector3(gameObject.transform.position.x * -1, gameObject.transform.position.y * -1)
-        , ForceMode.Impulse);*/
+        //banana.GetComponent<Rigidbody>().AddForce(BSpeedX* gameObject.transform.position.x * -1, BSpeedY* gameObject.transform.position.y, gameObject.transform.position.z, ForceMode.Impulse);
+        banana.GetComponent<Rigidbody>().AddForce(miPadre.transform.rotation * new Vector3(gameObject.transform.position.x * -5, gameObject.transform.position.y)
+        , ForceMode.Impulse);
         banana.transform.parent = null;
     }
 }
