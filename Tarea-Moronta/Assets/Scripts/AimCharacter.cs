@@ -32,8 +32,9 @@ public class AimCharacter : MonoBehaviour
     public void Disparar()
     {
         miPadre = GameObject.Find("Brazo 1");
-        banana = Instantiate(proyectil,new Vector3(miPadre.transform.position.x, miPadre.transform.position.y, miPadre.transform.position.z),Quaternion.identity);
+        banana = Instantiate(proyectil, new Vector3(miPadre.transform.position.x, miPadre.transform.position.y, miPadre.transform.position.z), miPadre.transform.rotation);
         //banana.transform.SetParent(miPadre.transform);
+
         banana.transform.parent = null;
         banana.GetComponent<Rigidbody>().AddForce( BSpeedX* gameObject.transform.position.x * -1,
             BSpeedY* gameObject.transform.position.y * -1, gameObject.transform.position.z*-1, ForceMode.Impulse);
