@@ -29,7 +29,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.644447, y: 0.044445194, z: -0}
   m_LocalScale: {x: 9.302221, y: 0.7588888, z: 11.111111}
-  m_Children: []
+  m_Children:
+  - {fileID: 6714325227728421727}
   m_Father: {fileID: 8270846519624891302}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -318,7 +319,7 @@ GameObject:
   - component: {fileID: 5977618692332389165}
   - component: {fileID: 7685124066455819303}
   - component: {fileID: 523444640362328462}
-  - component: {fileID: 6713619641361263907}
+  - component: {fileID: 6947876402084219966}
   m_Layer: 0
   m_Name: Articulacion 1
   m_TagString: Untagged
@@ -399,7 +400,7 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6713619641361263907
+--- !u!114 &6947876402084219966
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -411,6 +412,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31383280ed6d46499f7beff10286c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6215016815259283432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6714325227728421727}
+  - component: {fileID: 7188270661330560820}
+  m_Layer: 0
+  m_Name: Disparador
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6714325227728421727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215016815259283432}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.543, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5912734308257191388}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7188270661330560820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215016815259283432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4afbe7300330e46a0776aa44f9efe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   BSpeedX: 4
   BSpeedY: 4
-  proyectil: {fileID: 0}
+  proyectil: {fileID: 1647828686099682, guid: a6131ca9cf936bc4c917e6b4753a5d4d, type: 3}
