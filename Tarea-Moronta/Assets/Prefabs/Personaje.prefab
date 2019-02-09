@@ -457,5 +457,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BSpeedX: 4
   BSpeedY: 4
-  proyectil: {fileID: 417693025235509271, guid: 09c13715a0b8077469e037b3c818c8e0,
+  proyectil: {fileID: 8845303002871839594, guid: ac28bce7b104e7d41a38ba2effad4043,
     type: 3}
