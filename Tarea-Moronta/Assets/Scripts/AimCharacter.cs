@@ -20,7 +20,7 @@ public class AimCharacter : MonoBehaviour
     void Update()
     {
         gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0,
-            Input.GetAxis("Vertical")) * _VELOCIDAD * Time.deltaTime * (gameObject.name == "Articulacion 1" ? -1 : 1));
+        Input.GetAxis("Vertical")) * _VELOCIDAD * Time.deltaTime * (gameObject.name == "Articulacion 1" ? -1 : 1));
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
