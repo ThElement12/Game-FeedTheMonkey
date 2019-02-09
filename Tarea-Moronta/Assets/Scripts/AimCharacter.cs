@@ -24,14 +24,15 @@ public class AimCharacter : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Disparar1();
+            Disparar();
         }
     }
 
-    public void Disparar1()
+    public void Disparar()
     {
         banana = Instantiate(proyectil,gameObject.transform.position,Quaternion.identity, GameObject.Find("Brazo 1").transform);
         banana.transform.parent = null;
-        banana.GetComponent<Rigidbody>().AddForce( BSpeedX* gameObject.transform.position.x* -1, BSpeedY* gameObject.transform.position.y* -1, gameObject.transform.position.z*-1, ForceMode.Impulse);
+        banana.GetComponent<Rigidbody>().AddForce( BSpeedX* gameObject.transform.position.x * -1,
+            BSpeedY* gameObject.transform.position.y * -1, gameObject.transform.position.z*-1, ForceMode.Impulse);
     }
 }
