@@ -9,6 +9,7 @@ public class AimCharacter : MonoBehaviour
     public float BSpeedY = 4f;
     GameObject banana;
     public GameObject proyectil;
+    GameObject miPadre;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +31,9 @@ public class AimCharacter : MonoBehaviour
 
     public void Disparar()
     {
-        banana = Instantiate(proyectil,gameObject.transform.position,Quaternion.identity, GameObject.Find("Brazo 1").transform);
+        miPadre = GameObject.Find("Brazo 1");
+        banana = Instantiate(proyectil,new Vector3(miPadre.transform.position.x, miPadre.transform.position.y, miPadre.transform.position.z),Quaternion.identity);
+        //banana.transform.SetParent(miPadre.transform);
         banana.transform.parent = null;
         banana.GetComponent<Rigidbody>().AddForce( BSpeedX* gameObject.transform.position.x * -1,
             BSpeedY* gameObject.transform.position.y * -1, gameObject.transform.position.z*-1, ForceMode.Impulse);
