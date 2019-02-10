@@ -8,6 +8,7 @@ TagManager:
   - Arm
   - Head
   - Body
+  - Foe
   layers:
   - Default
   - TransparentFX

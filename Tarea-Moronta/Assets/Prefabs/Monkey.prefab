@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1505077487182061118}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Body
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -116,7 +116,7 @@ GameObject:
   - component: {fileID: 3882984632712638915}
   m_Layer: 0
   m_Name: Monkey
-  m_TagString: Untagged
+  m_TagString: Foe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -163,7 +163,7 @@ GameObject:
   - component: {fileID: 587886433921810178}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Head
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
