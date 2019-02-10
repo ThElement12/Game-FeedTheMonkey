@@ -35,8 +35,10 @@ public class Disparar : MonoBehaviour
         , ForceMode.Impulse);
         banana.transform.parent = null;
     }
-    public void dispararPoop()
+    public void dispararPoop(GameObject target, GameObject jugador)
     {
-
+        var heading = target.transform.position - jugador.transform.position;
+        var distance = heading.magnitude;
+        var direction = heading / distance;
     }
 }
