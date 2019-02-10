@@ -13,6 +13,7 @@ public class CentroJuegos : MonoBehaviour
     }
     public eTurno turno { get; set; }
     public bool acertado = false;
+    public bool bananaAlive = true;
     int puntajeJugador = 0;
     Disparar disparador;
     
@@ -39,8 +40,9 @@ public class CentroJuegos : MonoBehaviour
                 break;
             case eTurno.Comprobando:
 
-                if (!acertado)
+                if (!acertado && !bananaAlive)
                 {
+
                     turno = eTurno.TurnoMaquina;
                 }
                 else
@@ -50,6 +52,8 @@ public class CentroJuegos : MonoBehaviour
                 break;
             case eTurno.TurnoMaquina:
 
+                disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
+                disparador.dispararPoop();
 
 
 

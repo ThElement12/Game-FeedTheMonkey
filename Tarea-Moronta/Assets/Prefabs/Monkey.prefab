@@ -114,6 +114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1505077487248485267}
   - component: {fileID: 3882984632712638915}
+  - component: {fileID: 887873194472008498}
   m_Layer: 0
   m_Name: Monkey
   m_TagString: Foe
@@ -128,15 +129,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505077487248485268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.008726558, y: 0.999962, z: 0, w: 0}
+  m_LocalPosition: {x: 0.47771966, y: 0.00923872, z: -1.545476}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1505077487182061119}
   - {fileID: 5465141448985377563}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 1}
 --- !u!114 &3882984632712638915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -149,6 +150,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &887873194472008498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505077487248485268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b4afbe7300330e46a0776aa44f9efe2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BSpeedX: 4
+  BSpeedY: 4
+  proyectil: {fileID: 6359301369210657886, guid: edd4dec3982718c458be1796bbc1b451,
+    type: 3}
 --- !u!1 &2790166927621304511
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,6 +178,7 @@ GameObject:
   - component: {fileID: 6449848122017307126}
   - component: {fileID: 3743936440578692765}
   - component: {fileID: 587886433921810178}
+  - component: {fileID: 4969591092937582624}
   m_Layer: 0
   m_Name: Head
   m_TagString: Head
@@ -176,7 +194,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2790166927621304511}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.5284787, y: 4.07, z: -1.8125}
+  m_LocalPosition: {x: -0.5, y: 4.07, z: -0.17}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1505077487248485267}
@@ -240,3 +258,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4969591092937582624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2790166927621304511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

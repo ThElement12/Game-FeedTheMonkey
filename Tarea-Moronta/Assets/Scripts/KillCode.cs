@@ -7,7 +7,7 @@ public class KillCode : MonoBehaviour
     CentroJuegos centro;
     public void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Banana")
+        if(collision.gameObject.tag == "Banana" && gameObject.tag == "Foe")
         {
             Destroy(collision.gameObject);
             Destroy(GameObject.FindGameObjectWithTag("Foe"));

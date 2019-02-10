@@ -11,6 +11,9 @@ public class Disparar : MonoBehaviour
     GameObject banana;
     public GameObject proyectil;
     GameObject miPadre;
+    GameObject objetivo;
+    CentroJuegos centro;
+    
 
     void Start()
     {
@@ -35,10 +38,14 @@ public class Disparar : MonoBehaviour
         , ForceMode.Impulse);
         banana.transform.parent = null;
     }
-    public void dispararPoop(GameObject target, GameObject jugador)
+    public void dispararPoop()
     {
-        var heading = target.transform.position - jugador.transform.position;
-        var distance = heading.magnitude;
-        var direction = heading / distance;
+        miPadre = GameObject.FindGameObjectWithTag("Foe");
+        objetivo = GameObject.FindGameObjectWithTag("Player");
+        banana = Instantiate(proyectil, miPadre.transform.position, miPadre.transform.rotation);
+
+        banana.GetComponent<Rigidbody>().AddForce(new Vector3(objetivo.transform.position.x, objetivo.transform.position.y, objetivo.transform.position.z),ForceMode.Impulse);
+        banana.transform.parent = null;
+        
     }
 }
