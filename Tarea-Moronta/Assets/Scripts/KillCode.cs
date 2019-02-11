@@ -2,20 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KillCode : MonoBehaviour
+public class Killcode : MonoBehaviour
 {
     CentroJuegos centro;
-    public void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Banana" && gameObject.tag == "Foe")
+        if (collision.gameObject.tag == "Banana" && (gameObject.tag == "Body" || gameObject.tag == "Head") && gameObject.tag != "Respawn")
         {
             Destroy(collision.gameObject);
             Destroy(GameObject.FindGameObjectWithTag("Foe"));
             centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
             centro.acertado = true;
-            
-            
-            
         }
     }
 }

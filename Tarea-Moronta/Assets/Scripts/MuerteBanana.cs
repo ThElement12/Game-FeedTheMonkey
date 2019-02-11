@@ -8,7 +8,7 @@ public class MuerteBanana : MonoBehaviour
     public void OnCollisionEnter(Collision collision)
     {
 
-        if (gameObject.name != "cube")
+        if (gameObject.name = "Respawn")
         {
             Destroy(collision.gameObject);
             centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
