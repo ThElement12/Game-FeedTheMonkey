@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 851780856492405322}
   - component: {fileID: 851780856492405323}
   - component: {fileID: 851780856492405320}
-  - component: {fileID: 4044683994053798004}
+  - component: {fileID: 842005041471036281}
   m_Layer: 0
   m_Name: Plano
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -92,7 +92,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4044683994053798004
+--- !u!114 &842005041471036281
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 851780856492405321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdcede7b441e09469878c64514950a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &851780857942178963
@@ -116,10 +116,10 @@ GameObject:
   - component: {fileID: 851780857942178956}
   - component: {fileID: 851780857942178957}
   - component: {fileID: 851780857942178962}
-  - component: {fileID: 9096212844370727779}
+  - component: {fileID: 5477840140580262821}
   m_Layer: 0
   m_Name: Plataforma Jugador
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -196,7 +196,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &9096212844370727779
+--- !u!114 &5477840140580262821
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 851780857942178963}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdcede7b441e09469878c64514950a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &851780858186275617
@@ -220,10 +220,10 @@ GameObject:
   - component: {fileID: 851780858186275618}
   - component: {fileID: 851780858186275619}
   - component: {fileID: 851780858186275616}
-  - component: {fileID: 7849751767689704154}
+  - component: {fileID: 7510796930501271969}
   m_Layer: 0
   m_Name: Plataforma Foe
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7849751767689704154
+--- !u!114 &7510796930501271969
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -309,7 +309,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 851780858186275617}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fcdcede7b441e09469878c64514950a4, type: 3}
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &4246946288298669125

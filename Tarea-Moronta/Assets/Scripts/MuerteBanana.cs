@@ -10,9 +10,9 @@ public class MuerteBanana : MonoBehaviour
 
         if (gameObject.name == "Respawn")
         {
-            Destroy(collision.gameObject);
+   Destroy(collision.gameObject);
             centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
-            centro.bananaAlive = false;
+            centro.bananaAlive = false;         
         }
       
     }
