@@ -10,6 +10,7 @@ public class CentroJuegos : MonoBehaviour
         TurnoJugador,
         Comprobando,
         TurnoMaquina,
+        Fin
     }
     public eTurno turno { get; set; }
     public bool acertado = false;
@@ -54,6 +55,7 @@ public class CentroJuegos : MonoBehaviour
 
                 disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
                 disparador.dispararPoop();
+                turno = eTurno.Fin;
 
 
 
