@@ -42,9 +42,11 @@ public class Disparar : MonoBehaviour
     {
         miPadre = GameObject.FindGameObjectWithTag("Foe");
         objetivo = GameObject.FindGameObjectWithTag("Player");
-        banana = Instantiate(proyectil, miPadre.transform.position, miPadre.transform.rotation);
 
-        banana.GetComponent<Rigidbody>().AddForce(new Vector3(objetivo.transform.position.x, objetivo.transform.position.y, objetivo.transform.position.z),ForceMode.Impulse);
+        
+        banana = Instantiate(proyectil, new Vector3(miPadre.transform.position.x, miPadre.transform.position.y, 0),Quaternion.identity);
+
+        banana.GetComponent<Rigidbody>().AddForce(new Vector3(10 * BSpeedX, 0));
         banana.transform.parent = null;
         
     }
