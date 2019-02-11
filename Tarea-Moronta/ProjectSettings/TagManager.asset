@@ -9,6 +9,7 @@ TagManager:
   - Head
   - Body
   - Foe
+  - Poop
   layers:
   - Default
   - TransparentFX

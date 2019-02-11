@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 4405331824444022448}
   - component: {fileID: 1269982594181239850}
   - component: {fileID: 9195614027793838945}
+  - component: {fileID: 6890059848974080258}
   m_Layer: 0
   m_Name: Brazo 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,14 +27,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1631056886416010131}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.644447, y: 0.044445194, z: -0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.0027898066, w: 0.9999961}
+  m_LocalPosition: {x: -4.644447, y: 0.044445194, z: 0}
   m_LocalScale: {x: 9.302221, y: 0.7588888, z: 11.111111}
   m_Children:
   - {fileID: 6714325227728421727}
   m_Father: {fileID: 8270846519624891302}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.32000002}
 --- !u!33 &4405331824444022448
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -92,6 +93,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6890059848974080258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1631056886416010131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1974524946136209731
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 1974524946136209731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.228277, y: 0.7193596, z: 1.1963439}
   m_Children:
   - {fileID: 1974524946413579490}
   - {fileID: 1974524946175721548}
@@ -137,9 +150,10 @@ GameObject:
   - component: {fileID: 1974524946175721551}
   - component: {fileID: 1974524946175721550}
   - component: {fileID: 1974524946175721549}
+  - component: {fileID: 3837297746171171206}
   m_Layer: 0
   m_Name: Cuerpo
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -216,6 +230,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &3837297746171171206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974524946175721547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1974524946413579489
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,9 +254,10 @@ GameObject:
   - component: {fileID: 1974524946413579493}
   - component: {fileID: 1974524946413579492}
   - component: {fileID: 1974524946413579491}
+  - component: {fileID: 8484193209829783048}
   m_Layer: 0
   m_Name: Cabeza
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -307,6 +334,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8484193209829783048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1974524946413579489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4421048645231083933
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,9 +359,10 @@ GameObject:
   - component: {fileID: 7685124066455819303}
   - component: {fileID: 523444640362328462}
   - component: {fileID: 6947876402084219966}
+  - component: {fileID: 1238972882844530049}
   m_Layer: 0
   m_Name: Articulacion 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -412,6 +452,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d31383280ed6d46499f7beff10286c22, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1238972882844530049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421048645231083933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6215016815259283432
 GameObject:
   m_ObjectHideFlags: 0
@@ -422,9 +474,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6714325227728421727}
   - component: {fileID: 7188270661330560820}
+  - component: {fileID: 6078831208993452421}
   m_Layer: 0
   m_Name: Disparador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -459,3 +512,15 @@ MonoBehaviour:
   BSpeedY: 4
   proyectil: {fileID: 8845303002871839594, guid: ac28bce7b104e7d41a38ba2effad4043,
     type: 3}
+--- !u!114 &6078831208993452421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6215016815259283432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

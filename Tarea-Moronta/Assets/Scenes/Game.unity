@@ -780,11 +780,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Personaje
       objectReference: {fileID: 0}
-    - target: {fileID: 1696877262840932512, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 1974524946136209732, guid: e9b8a5d62ec279148b5430050012a7dd,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -839,46 +834,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1974524946136209732, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.7193596
-      objectReference: {fileID: 0}
-    - target: {fileID: 1974524946136209732, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.228277
-      objectReference: {fileID: 0}
-    - target: {fileID: 1974524946136209732, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.1963439
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912734308257191388, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.0027898066
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912734308257191388, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9999961
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912734308257191388, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5912734308257191388, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0.32000002
-      objectReference: {fileID: 0}
-    - target: {fileID: 1631056886416010131, guid: e9b8a5d62ec279148b5430050012a7dd,
-        type: 3}
-      propertyPath: m_TagString
-      value: Respawn
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9b8a5d62ec279148b5430050012a7dd, type: 3}

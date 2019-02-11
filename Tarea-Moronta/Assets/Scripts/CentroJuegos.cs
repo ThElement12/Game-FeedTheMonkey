@@ -33,8 +33,10 @@ public class CentroJuegos : MonoBehaviour
                 disparador = GameObject.Find("Disparador").GetComponent<Disparar>();
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
+                   // GameObject.FindGameObjectWithTag("Foe").transform.parent = null;
                     disparador.dispararBanana();
                     turno = eTurno.Comprobando;
+
 
                 }
 
@@ -56,8 +58,6 @@ public class CentroJuegos : MonoBehaviour
                 disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
                 disparador.dispararPoop();
                 turno = eTurno.Fin;
-
-
 
                 break;
          
