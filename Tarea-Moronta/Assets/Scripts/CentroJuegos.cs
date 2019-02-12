@@ -17,16 +17,20 @@ public class CentroJuegos : MonoBehaviour
     public bool bananaAlive = true;
     int puntajeJugador = 0;
     Disparar disparador;
+    AudioSource audio;
     
     // Start is called before the first frame update
     void Start()
     {
        turno = eTurno.TurnoJugador;
+       audio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
+       audio.Play();
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         switch (turno)
         {
             case eTurno.TurnoJugador:
@@ -58,6 +62,11 @@ public class CentroJuegos : MonoBehaviour
                 disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
                 disparador.dispararPoop();
                 turno = eTurno.Fin;
+
+                break;
+            case eTurno.Fin:
+
+                
 
                 break;
          

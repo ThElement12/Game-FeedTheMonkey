@@ -5,6 +5,7 @@ using UnityEngine;
 public class KillCode : MonoBehaviour
 {
     CentroJuegos centro;
+    AudioSource audio;
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.tag == "Banana")
@@ -33,7 +34,8 @@ public class KillCode : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
-
+                audio = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+                audio.Play();
             }
         }
     }
