@@ -62,18 +62,20 @@ public class CentroJuegos : MonoBehaviour
                 else
                 {
                     puntajeJugador++;
-                    generarMapa();
-                    nextenemy = Instantiate(enemy);
-                    nextenemy.transform.position = new Vector3(mapas[mapaActual].transform.position.x, mapas[mapaActual].transform.position.y);
-                    nextenemy.transform.SetParent( GameObject.Find("Plataforma Foe").transform);
-                    nextenemy.transform.parent = null;
+                    //generarMapa();
+                    nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
+                    //nextenemy.transform.parent = GameObject.Find("Plataforma Foe").transform;
+                    //nextenemy.transform.localPosition = new Vector3(0.382f, 1.14f);
+                    //nextenemy.transform.position = new Vector3(mapas[mapaActual].transform.position.x, mapas[mapaActual].transform.position.y);
+                    //nextenemy.transform.SetParent( GameObject.Find("Plataforma Foe").transform);
+                    //nextenemy.transform.parent = null;
                     //personaje.transform.parent = null;
                     //personaje.transform.position = new Vector3(mapa1.transform.position.x - 11f, mapa1.transform.position.y + 3.08f);
-                    GameObject.Find("Main Camera").transform.position = new Vector3(mapas[mapaActual].transform.position.x , mapas[mapaActual].transform.position.y + 0.98948f, -10);
+                    //GameObject.Find("Main Camera").transform.position = new Vector3(mapas[mapaActual].transform.position.x , mapas[mapaActual].transform.position.y + 0.98948f, -10);
                     bananaAlive = true;
                     acertado = false;
                     turno = eTurno.TurnoJugador;
-                    mapaActual++;
+                    //mapaActual++;
                 }
                 break;
             case eTurno.TurnoMaquina:
