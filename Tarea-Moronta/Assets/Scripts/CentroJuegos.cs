@@ -65,8 +65,8 @@ public class CentroJuegos : MonoBehaviour
                     generarMapa();
                     nextenemy = Instantiate(enemy);
                     nextenemy.transform.position = new Vector3(mapas[mapaActual].transform.position.x, mapas[mapaActual].transform.position.y);
-                    nextenemy.transform.parent = GameObject.Find("Plataforma Foe").transform;
-                    //nextenemy.transform.parent = null;
+                    nextenemy.transform.SetParent( GameObject.Find("Plataforma Foe").transform);
+                    nextenemy.transform.parent = null;
                     //personaje.transform.parent = null;
                     //personaje.transform.position = new Vector3(mapa1.transform.position.x - 11f, mapa1.transform.position.y + 3.08f);
                     GameObject.Find("Main Camera").transform.position = new Vector3(mapas[mapaActual].transform.position.x , mapas[mapaActual].transform.position.y + 0.98948f, -10);
