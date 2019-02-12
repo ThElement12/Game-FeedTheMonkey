@@ -6,8 +6,10 @@ public class KillCode : MonoBehaviour
 {
     CentroJuegos centro;
     AudioSource audio;
+    
     private void OnCollisionEnter(Collision collision)
     {
+        //centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
         if (collision.gameObject.tag == "Banana")
         {
             if(gameObject.tag == "Foe")
@@ -17,6 +19,7 @@ public class KillCode : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("Foe"));
                 centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
                 centro.acertado = true;
+                
                // centro.bananaAlive = false;
             }
 
@@ -27,6 +30,7 @@ public class KillCode : MonoBehaviour
                 centro.bananaAlive = false;
             }
 
+            CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
         }
         if(collision.gameObject.tag == "Poop")
         {
@@ -37,6 +41,9 @@ public class KillCode : MonoBehaviour
                 audio = GameObject.Find("Main Camera").GetComponent<AudioSource>();
                 audio.Play();
             }
+
+            CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
         }
+
     }
 }

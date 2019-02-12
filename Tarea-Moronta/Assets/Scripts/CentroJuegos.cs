@@ -12,7 +12,7 @@ public class CentroJuegos : MonoBehaviour
         TurnoMaquina,
         Fin
     }
-    public eTurno turno { get; set; }
+    public static eTurno turno; //{ get; set; }
     public bool acertado = false;
     public bool bananaAlive = true;
     int puntajeJugador = 0;
@@ -24,6 +24,7 @@ public class CentroJuegos : MonoBehaviour
     public GameObject mapa3;
     public GameObject personaje;
     public GameObject enemy;
+    GameObject nextenemy;
     GameObject nextmap;
 
     // Start is called before the first frame update
@@ -46,7 +47,7 @@ public class CentroJuegos : MonoBehaviour
                 {
                    // GameObject.FindGameObjectWithTag("Foe").transform.parent = null;
                     disparador.dispararBanana();
-                    turno = eTurno.Comprobando;
+                    //turno = eTurno.Comprobando;
 
 
                 }
@@ -64,8 +65,15 @@ public class CentroJuegos : MonoBehaviour
                     nextmap = Instantiate(mapa1);
                     nextmap.SetActive(true);
                     nextmap.transform.position = new Vector3(mapa1.transform.position.x - 19.422f, mapa1.transform.position.y + 4.08948f);
-                    turno = eTurno.TurnoJugador;
+                    nextenemy = Instantiate(enemy);
+                    nextenemy.transform.position = new Vector3(mapa1.transform.position.x - 23.422f, mapa1.transform.position.y + 6.03f);
                     mapa1 = nextmap;
+                    //personaje.transform.parent = null;
+                    //personaje.transform.position = new Vector3(mapa1.transform.position.x - 11f, mapa1.transform.position.y + 3.08f);
+                    GameObject.Find("Main Camera").transform.position = new Vector3(mapa1.transform.position.x , mapa1.transform.position.y + 0.98948f, -10);
+                    bananaAlive = true;
+                    acertado = false;
+                    turno = eTurno.TurnoJugador;
                 }
                 break;
             case eTurno.TurnoMaquina:
