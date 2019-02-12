@@ -16,14 +16,14 @@ public class CentroJuegos : MonoBehaviour
     public bool acertado = false;
     public bool bananaAlive = true;
     int puntajeJugador = 0;
+    int mapaActual = 0;
     Disparar disparador;
     AudioSource audio;
-    
-    public GameObject mapa1;
-    public GameObject mapa2;
-    public GameObject mapa3;
+
+    public GameObject[] mapas = new GameObject[3];
     public GameObject personaje;
     public GameObject enemy;
+
     GameObject nextenemy;
     GameObject nextmap;
 
@@ -62,18 +62,18 @@ public class CentroJuegos : MonoBehaviour
                 else
                 {
                     puntajeJugador++;
-                    nextmap = Instantiate(mapa1);
-                    nextmap.SetActive(true);
-                    nextmap.transform.position = new Vector3(mapa1.transform.position.x - 19.422f, mapa1.transform.position.y + 4.08948f);
+                    generarMapa();
                     nextenemy = Instantiate(enemy);
-                    nextenemy.transform.position = new Vector3(mapa1.transform.position.x - 23.422f, mapa1.transform.position.y + 6.03f);
-                    mapa1 = nextmap;
+                    nextenemy.transform.position = new Vector3(mapas[mapaActual].transform.position.x, mapas[mapaActual].transform.position.y);
+                    nextenemy.transform.parent = GameObject.Find("Plataforma Foe").transform;
+                    //nextenemy.transform.parent = null;
                     //personaje.transform.parent = null;
                     //personaje.transform.position = new Vector3(mapa1.transform.position.x - 11f, mapa1.transform.position.y + 3.08f);
-                    GameObject.Find("Main Camera").transform.position = new Vector3(mapa1.transform.position.x , mapa1.transform.position.y + 0.98948f, -10);
+                    GameObject.Find("Main Camera").transform.position = new Vector3(mapas[mapaActual].transform.position.x , mapas[mapaActual].transform.position.y + 0.98948f, -10);
                     bananaAlive = true;
                     acertado = false;
                     turno = eTurno.TurnoJugador;
+                    mapaActual++;
                 }
                 break;
             case eTurno.TurnoMaquina:
@@ -93,6 +93,14 @@ public class CentroJuegos : MonoBehaviour
 
      
         
+    }
+    void generarMapa()
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Respawn"));
+        nextmap = Instantiate(mapas[mapaActual]);
+        nextmap.SetActive(true);
+        nextmap.transform.position = new Vector3(mapas[mapaActual].transform.position.x - 19.422f, mapas[mapaActual].transform.position.y + 4.08948f);
+        mapas[mapaActual] = nextmap;
     }
 
 }

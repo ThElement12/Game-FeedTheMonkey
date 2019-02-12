@@ -416,9 +416,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   acertado: 0
   bananaAlive: 1
-  mapa1: {fileID: 4246946288298669125, guid: 3b35e8fd21baa6240aeaca633c51294a, type: 3}
-  mapa2: {fileID: 7614650732860672906, guid: 527b3eab04ccfe648828ad6c498bf9c1, type: 3}
-  mapa3: {fileID: 6194664543674897954, guid: 031bfb9d6765f274882ce7748b6376ba, type: 3}
+  mapas:
+  - {fileID: 4246946288298669125, guid: 3b35e8fd21baa6240aeaca633c51294a, type: 3}
+  - {fileID: 7614650732860672906, guid: 527b3eab04ccfe648828ad6c498bf9c1, type: 3}
+  - {fileID: 6194664543674897954, guid: 031bfb9d6765f274882ce7748b6376ba, type: 3}
   personaje: {fileID: 1998719423}
   enemy: {fileID: 1505077487248485268, guid: b95bc08f95229ce42bb9b8376fd937a3, type: 3}
 --- !u!82 &1172334380
@@ -556,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 4246946288298669125, guid: 3b35e8fd21baa6240aeaca633c51294a,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Respawn
       objectReference: {fileID: 0}
     - target: {fileID: 1144098564779673607, guid: 3b35e8fd21baa6240aeaca633c51294a,
         type: 3}

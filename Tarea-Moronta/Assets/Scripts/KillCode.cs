@@ -19,8 +19,9 @@ public class KillCode : MonoBehaviour
                 Destroy(GameObject.FindGameObjectWithTag("Foe"));
                 centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
                 centro.acertado = true;
-                
-               // centro.bananaAlive = false;
+
+                // centro.bananaAlive = false;
+                CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
             }
 
             else if(gameObject.tag == "Respawn")
@@ -28,9 +29,10 @@ public class KillCode : MonoBehaviour
                 Destroy(collision.gameObject);
                 centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
                 centro.bananaAlive = false;
+                CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
             }
 
-            CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
+            
         }
         if(collision.gameObject.tag == "Poop")
         {
@@ -42,7 +44,7 @@ public class KillCode : MonoBehaviour
                 audio.Play();
             }
 
-            CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
+           // CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
         }
 
     }
