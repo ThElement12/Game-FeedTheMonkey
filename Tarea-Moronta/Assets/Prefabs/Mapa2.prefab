@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 2421880392980238601}
   - component: {fileID: 6344127267751305863}
   m_Layer: 0
-  m_Name: Plataforma foe
-  m_TagString: Untagged
+  m_Name: Plataforma Foe
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -104,8 +104,8 @@ GameObject:
   - component: {fileID: 804956856309113536}
   - component: {fileID: 3542151333413139295}
   m_Layer: 0
-  m_Name: Ini
-  m_TagString: Untagged
+  m_Name: Plataforma Jugador
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -228,8 +228,8 @@ GameObject:
   - component: {fileID: 8664905034982007986}
   - component: {fileID: 4743151199969530848}
   m_Layer: 0
-  m_Name: Plano escalon
-  m_TagString: Untagged
+  m_Name: Plano
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

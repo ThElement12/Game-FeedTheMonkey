@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2321962306334438555}
   m_Layer: 0
   m_Name: Plataforma Jugador
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 5558047555899070455}
   m_Layer: 0
   m_Name: Plataforma Foe
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   - component: {fileID: 8908968800925725946}
   m_Layer: 0
   m_Name: Plano
-  m_TagString: Untagged
+  m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
