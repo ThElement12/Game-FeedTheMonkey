@@ -21,6 +21,9 @@ public class CentroJuegos : MonoBehaviour
     Disparar disparador;
     AudioSource audio;
     public TextMesh misPuntos;
+  /*  public GameObject fondo1;
+    public GameObject fondo2;
+    public GameObject fondo3;*/
 
 
     public GameObject personaje;
