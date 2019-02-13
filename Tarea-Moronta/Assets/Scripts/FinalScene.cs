@@ -26,4 +26,5 @@ public class FinalScene : MonoBehaviour
         Debug.Log("Quit");
         Application.Quit();
     }
+    
 }
