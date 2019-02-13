@@ -7,6 +7,8 @@ public class MuerteBanana : MonoBehaviour
     CentroJuegos centro;
     public void OnCollisionEnter(Collision collision)
     {
+        //Esto destruye el proyectil (banana) al entrar en contacto
+
 
         if (gameObject.name == "Respawn")
         {

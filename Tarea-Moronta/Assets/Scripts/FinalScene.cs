@@ -7,6 +7,9 @@ public class FinalScene : MonoBehaviour
 {
     AudioSource audio;
 
+    /// Aqui se instancia la escena final
+
+
     public TextMesh misPuntos;
     void Start()
     {

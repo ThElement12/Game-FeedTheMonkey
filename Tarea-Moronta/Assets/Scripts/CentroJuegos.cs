@@ -48,6 +48,7 @@ public class CentroJuegos : MonoBehaviour
         switch (turno)
         {
             case eTurno.TurnoJugador:
+                ///Si es turno del jugador pues comienza a disparar
                 disparador = GameObject.Find("Disparador").GetComponent<Disparar>();
                 if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(1))
                 {
@@ -58,13 +59,14 @@ public class CentroJuegos : MonoBehaviour
 
                 break;
             case eTurno.Comprobando:
-
+                ///Aqui comprueba si el usuario acerto o no
                 if (!acertado && !bananaAlive)
                 {
                     turno = eTurno.TurnoMaquina;
                 }
                 else
                 {
+                    //Aqui se inicializa el siguiente nivel 
                     puntajeJugador ++;
                     misPuntos.text = puntajeJugador.ToString();
                     nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
@@ -75,12 +77,14 @@ public class CentroJuegos : MonoBehaviour
                 }
                 break;
             case eTurno.TurnoMaquina:
+                ///Aqui la maquina le dispara 
 
                 disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
                 disparador.dispararPoop();
 
                 break;
             case eTurno.Fin:
+                ///CAmbio de escena
 
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
