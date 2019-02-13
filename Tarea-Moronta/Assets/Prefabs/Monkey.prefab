@@ -115,7 +115,6 @@ GameObject:
   - component: {fileID: 1505077487248485267}
   - component: {fileID: 887873194472008498}
   - component: {fileID: 8155403953673851360}
-  - component: {fileID: 1730609092}
   - component: {fileID: 8118822658031768074}
   m_Layer: 0
   m_Name: Monkey
@@ -157,18 +156,6 @@ MonoBehaviour:
   proyectil: {fileID: 6359301369210657886, guid: edd4dec3982718c458be1796bbc1b451,
     type: 3}
 --- !u!114 &8155403953673851360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1505077487248485268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3827d8a9b91809f4eba65dca86a33213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1730609092
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

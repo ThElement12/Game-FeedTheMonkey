@@ -32,9 +32,7 @@ public class AimCharacter : MonoBehaviour
         {
             gameObject.GetComponent<Transform>().Rotate(Vector3.forward, variacion * Time.deltaTime * _VELOCIDAD);
         }
-        
-  //      gameObject.GetComponent<Transform>().Rotate(new Vector3(0, 0,
-//        Input.GetAxis("Vertical")) * _VELOCIDAD * Time.deltaTime * (gameObject.name == "Articulacion 1" ? -1 : 1));
+
         
     }
 

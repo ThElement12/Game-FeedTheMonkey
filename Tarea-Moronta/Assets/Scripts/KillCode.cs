@@ -5,7 +5,7 @@ using UnityEngine;
 public class KillCode : MonoBehaviour
 {
     CentroJuegos centro;
-    AudioSource audio;
+
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -40,8 +40,8 @@ public class KillCode : MonoBehaviour
             {
                 Destroy(collision.gameObject);
                 Destroy(GameObject.FindGameObjectWithTag("Player"));
-                audio = GameObject.Find("Main Camera").GetComponent<AudioSource>();
-                audio.Play();
+                
+                CentroJuegos.turno = CentroJuegos.eTurno.Fin;
             }
 
            // CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
