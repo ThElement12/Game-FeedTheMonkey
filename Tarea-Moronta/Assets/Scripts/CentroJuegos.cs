@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CentroJuegos : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class CentroJuegos : MonoBehaviour
     public static eTurno turno; //{ get; set; }
     public bool acertado = false;
     public bool bananaAlive = true;
-    int puntajeJugador = 0;
+    public static int puntajeJugador = 0;
     int mapaActual = 0;
     Disparar disparador;
     AudioSource audio;
@@ -90,7 +91,7 @@ public class CentroJuegos : MonoBehaviour
                 break;
             case eTurno.Fin:
 
-                
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
 
                 break;
          
