@@ -6,6 +6,7 @@ public class KillCode : MonoBehaviour
 {
     CentroJuegos centro;
 
+    // Aqui es donde se destruyen la banana, la popo, el jugador y o el enemigo(mono)
     
     private void OnCollisionEnter(Collision collision)
     {
@@ -13,14 +14,12 @@ public class KillCode : MonoBehaviour
         if (collision.gameObject.tag == "Banana")
         {
             if(gameObject.tag == "Foe")
-            //if (gameObject.tag == "Body" || gameObject.tag == "Head")
             {
                 Destroy(collision.gameObject);
                 Destroy(GameObject.FindGameObjectWithTag("Foe"));
                 centro = GameObject.Find("Main Camera").GetComponent<CentroJuegos>();
                 centro.acertado = true;
-
-                // centro.bananaAlive = false;
+                
                 CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
             }
 
@@ -44,7 +43,7 @@ public class KillCode : MonoBehaviour
                 CentroJuegos.turno = CentroJuegos.eTurno.Fin;
             }
 
-           // CentroJuegos.turno = CentroJuegos.eTurno.Comprobando;
+
         }
 
     }
