@@ -7,9 +7,10 @@ public class CentroJuegos : MonoBehaviour
 {
    public enum eTurno
     {
-        
+        GenerandoMap,
         TurnoJugador,
         Comprobando,
+        Caminando,
         TurnoMaquina,
         Fin
     }
@@ -21,24 +22,36 @@ public class CentroJuegos : MonoBehaviour
     Disparar disparador;
     AudioSource audio;
     public TextMesh misPuntos;
-  /*  public GameObject fondo1;
-    public GameObject fondo2;
-    public GameObject fondo3;*/
+    /*  public GameObject fondo1;
+      public GameObject fondo2;
+      public GameObject fondo3;*/
 
-
+    public GameObject mapaNorm;
+    public GameObject mapaInv;
+    GameObject nextMap;
+    bool mapGen = false;
+    int mapGenNum = 0;
+    bool plataforma = true;
     public GameObject personaje;
     public GameObject enemy;
 
     GameObject nextenemy;
- 
+    Vector3 vectorGM;
+    Vector3 vectorDP1;
+    Vector3 vectorDP2;
+    int pasos = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-       turno = eTurno.TurnoJugador;
+       turno = eTurno.GenerandoMap;
        audio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
        audio.Play();
        misPuntos.text = puntajeJugador.ToString();
+       vectorGM = new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y, 3);
+       vectorDP1 = new Vector3(1.48f,0);
+        vectorDP2 = new Vector3(8f,0);
+       
     }
 
     // Update is called once per frame
@@ -47,6 +60,37 @@ public class CentroJuegos : MonoBehaviour
         
         switch (turno)
         {
+            case eTurno.GenerandoMap:
+                if (mapGenNum <= 1)
+                {
+                    vectorGM.y += 4.04f;
+                    if (!mapGen)
+                    {
+                        nextMap = Instantiate(mapaInv);
+                        nextMap.transform.position = vectorGM;
+                        enemy = nextMap.transform.GetChild(3).gameObject;
+                        enemy.SetActive(false);
+                        //mapGen = true;
+                    }
+
+                    if (mapGen)
+                    {
+                        //Vector3 mivector = new Vector3(0.12f, nextMap.transform.position.y + 4.04f, 3);
+                        nextMap = Instantiate(mapaNorm);
+                        nextMap.transform.position = vectorGM; //new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y + 4.04f, 3);
+                        enemy = nextMap.transform.GetChild(3).gameObject;
+                        enemy.SetActive(false);
+                        //mapGen = false;
+                    }
+                    mapGen = !mapGen;
+                    mapGenNum++;
+                }
+                else
+                {
+                    mapGenNum = 0;
+                    turno = eTurno.TurnoJugador;
+                }
+                break;
             case eTurno.TurnoJugador:
                 ///Si es turno del jugador pues comienza a disparar
                 disparador = GameObject.Find("Disparador").GetComponent<Disparar>();
@@ -69,11 +113,39 @@ public class CentroJuegos : MonoBehaviour
                     //Aqui se inicializa el siguiente nivel 
                     puntajeJugador ++;
                     misPuntos.text = puntajeJugador.ToString();
-                    nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
+                    //nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
                     bananaAlive = true;
                     acertado = false;
-                    turno = eTurno.TurnoJugador;
+                    plataforma = !plataforma;
+                    turno = eTurno.Caminando;
 
+                }
+                break;
+            case eTurno.Caminando:
+                
+                if (pasos <= 1)
+                {
+                    if (pasos == 0)
+                    {
+                        vectorDP1.x *= -1;
+                        vectorDP1.y += 1.15f;
+                        personaje.transform.position = vectorDP1;
+                    }
+
+                    if (pasos == 1)
+                    {
+                        vectorDP2.x *= -1;
+                        vectorDP2.y += 2.8f;
+                        personaje.transform.position = vectorDP2;
+                    }
+
+                    pasos++;
+                    //yield return new WaitForSeconds(5);
+                }
+                else
+                {
+                    pasos = 0;
+                    turno = eTurno.TurnoJugador;
                 }
                 break;
             case eTurno.TurnoMaquina:
