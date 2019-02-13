@@ -323,7 +323,12 @@ PrefabInstance:
     - target: {fileID: 81760846928708218, guid: c6ab64183c7014b449c405966545ff59,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 99.4
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 81760846928708218, guid: c6ab64183c7014b449c405966545ff59,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -252
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6ab64183c7014b449c405966545ff59, type: 3}
@@ -345,15 +350,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Puntos
       objectReference: {fileID: 0}
+    - target: {fileID: 5729822405927837592, guid: 227f6ec498f4a3d4f85958b7605b0af6,
+        type: 3}
+      propertyPath: m_Text
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5729822405927837594, guid: 227f6ec498f4a3d4f85958b7605b0af6,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.09
+      value: -6.62
       objectReference: {fileID: 0}
     - target: {fileID: 5729822405927837594, guid: 227f6ec498f4a3d4f85958b7605b0af6,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.08
+      value: 6.95
       objectReference: {fileID: 0}
     - target: {fileID: 5729822405927837594, guid: 227f6ec498f4a3d4f85958b7605b0af6,
         type: 3}

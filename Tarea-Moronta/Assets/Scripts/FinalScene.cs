@@ -6,12 +6,11 @@ using UnityEngine.SceneManagement;
 public class FinalScene : MonoBehaviour
 {
     AudioSource audio;
-    int puntos = CentroJuegos.puntajeJugador;
 
     public TextMesh misPuntos;
     void Start()
     {
-        misPuntos.text = puntos.ToString();
+        misPuntos.text = CentroJuegos.puntajeJugador.ToString();
         audio = GameObject.Find("Main Camera").GetComponent<AudioSource>();
         audio.Play();
     }
