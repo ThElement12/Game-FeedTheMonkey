@@ -19,6 +19,7 @@ public class CentroJuegos : MonoBehaviour
     int mapaActual = 0;
     Disparar disparador;
     AudioSource audio;
+    public TextMesh misPuntos;
 
     public GameObject[] mapas = new GameObject[3];
     public GameObject personaje;
@@ -33,6 +34,7 @@ public class CentroJuegos : MonoBehaviour
        turno = eTurno.TurnoJugador;
        audio = GameObject.FindGameObjectWithTag("Player").GetComponent<AudioSource>();
        audio.Play();
+       misPuntos.text = puntajeJugador.ToString();
     }
 
     // Update is called once per frame
@@ -61,7 +63,8 @@ public class CentroJuegos : MonoBehaviour
                 }
                 else
                 {
-                    puntajeJugador++;
+                    puntajeJugador += 1;
+                    misPuntos.text = puntajeJugador.ToString();
                     //generarMapa();
                     nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
                     //nextenemy.transform.parent = GameObject.Find("Plataforma Foe").transform;
