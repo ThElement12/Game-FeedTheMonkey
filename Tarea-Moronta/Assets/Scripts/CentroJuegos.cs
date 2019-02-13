@@ -14,7 +14,7 @@ public class CentroJuegos : MonoBehaviour
         TurnoMaquina,
         Fin
     }
-    float zhenpeng = 100f;
+    
     public static eTurno turno; //{ get; set; }
     public bool acertado = false;
     public bool bananaAlive = true;
@@ -164,13 +164,10 @@ public class CentroJuegos : MonoBehaviour
                 break;
          
         }
- 
-    }
 
-    void FixedUpdate()
-    {
-        
+     
         
     }
 
+   
 }
