@@ -55,9 +55,8 @@ public class CentroJuegos : MonoBehaviour
        misPuntos.text = puntajeJugador.ToString();
        vectorGM = new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y, 3);
        vectorDP1 = new Vector3(1.48f, -0.9183253f);
-        vectorDP2 = new Vector3(8f,0);
-        
-        vectorMC = new Vector3(0, 1.05f,-10f);
+       vectorDP2 = new Vector3(8f,0); 
+       vectorMC = new Vector3(0, 1.05f,-10f);
 
        
     }
@@ -80,8 +79,8 @@ public class CentroJuegos : MonoBehaviour
                         enemy.SetActive(false);
                         //mapGen = true;
                     }
-
-                    if (mapGen)
+                        
+                    else
                     {
                         //Vector3 mivector = new Vector3(0.12f, nextMap.transform.position.y + 4.04f, 3);
                         nextMap = Instantiate(mapaNorm);
@@ -156,7 +155,7 @@ public class CentroJuegos : MonoBehaviour
                     turno = eTurno.TurnoJugador;
                 }
                 break;*/
-            case eTurno.TurnoMaquina:
+            case eTurno.TurnoMaquina:   
                 ///Aqui la maquina le dispara 
 
                 disparador = GameObject.FindGameObjectWithTag("Foe").GetComponent<Disparar>();
@@ -238,7 +237,7 @@ public class CentroJuegos : MonoBehaviour
                         //mapGen = false;
                     }
                     
-                    if (!mapGen)
+                    else
                     {
                         nextMap = Instantiate(mapaInv);
                         nextMap.transform.position = vectorGM;
