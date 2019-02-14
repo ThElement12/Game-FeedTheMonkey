@@ -56,6 +56,7 @@ public class CentroJuegos : MonoBehaviour
        vectorGM = new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y, 3);
        vectorDP1 = new Vector3(1.48f, -0.9183253f);
         vectorDP2 = new Vector3(8f,0);
+        
         vectorMC = new Vector3(0, 1.05f,-10f);
 
        
@@ -217,14 +218,15 @@ public class CentroJuegos : MonoBehaviour
                         personaje.transform.Rotate(0f, 0f, 0f);
                     }
                     pasos = 0;
-                    turno = eTurno.TurnoJugador;
-                    vectorMC.y += 6.45f;
+                  
+                    vectorMC.y += 3f;
                     GameObject.Find("Main Camera").transform.position = vectorMC;
 
                     actualMap.transform.position = new Vector3(actualMap.transform.position.x, actualMap.transform.position.y, 0f);
                     enemy = actualMap.transform.GetChild(3).gameObject;
                     enemy.SetActive(true);
                     actualMap = nextMap;
+                    nextMap = null;
                     vectorGM.y += 4.04f;
                     if (mapGen)
                     {
@@ -238,13 +240,14 @@ public class CentroJuegos : MonoBehaviour
                     
                     if (!mapGen)
                     {
-                        actualMap = Instantiate(mapaInv);
-                        actualMap.transform.position = vectorGM;
-                        enemy = actualMap.transform.GetChild(3).gameObject;
+                        nextMap = Instantiate(mapaInv);
+                        nextMap.transform.position = vectorGM;
+                        enemy = nextMap.transform.GetChild(3).gameObject;
                         enemy.SetActive(false);
                         //mapGen = true;
                     }
                     mapGen = !mapGen;
+                    turno = eTurno.TurnoJugador;
                 }
                 //StartCoroutine(Example());
                 //turno = eTurno.TurnoJugador;
