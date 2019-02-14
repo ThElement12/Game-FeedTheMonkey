@@ -14,6 +14,8 @@ public class CentroJuegos : MonoBehaviour
         TurnoMaquina,
         Fin
     }
+    float MaxCooldown = 50f;
+    float Cooldown = 0f;
     public static eTurno turno; //{ get; set; }
     public bool acertado = false;
     public bool bananaAlive = true;
@@ -49,7 +51,7 @@ public class CentroJuegos : MonoBehaviour
        audio.Play();
        misPuntos.text = puntajeJugador.ToString();
        vectorGM = new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y, 3);
-       vectorDP1 = new Vector3(1.48f,0);
+       vectorDP1 = new Vector3(1.48f, -0.9183253f);
         vectorDP2 = new Vector3(8f,0);
        
     }
@@ -116,12 +118,12 @@ public class CentroJuegos : MonoBehaviour
                     //nextenemy = Instantiate(enemy,new Vector3 (-3.871404f, 8.81884f),Quaternion.identity);
                     bananaAlive = true;
                     acertado = false;
-                    plataforma = !plataforma;
+                    //plataforma = !plataforma;
                     turno = eTurno.Caminando;
 
                 }
                 break;
-            case eTurno.Caminando:
+            /*case eTurno.Caminando:
                 
                 if (pasos <= 1)
                 {
@@ -140,14 +142,14 @@ public class CentroJuegos : MonoBehaviour
                     }
 
                     pasos++;
-                    //yield return new WaitForSeconds(5);
+                    
                 }
                 else
                 {
                     pasos = 0;
                     turno = eTurno.TurnoJugador;
                 }
-                break;
+                break;*/
             case eTurno.TurnoMaquina:
                 ///Aqui la maquina le dispara 
 
@@ -166,6 +168,90 @@ public class CentroJuegos : MonoBehaviour
 
      
         
+    }
+
+    private void FixedUpdate()
+    {
+        if(Cooldown > 0)
+        {
+            Cooldown--;
+        }
+        switch (turno)
+        {
+            case eTurno.Caminando:
+
+                if (pasos <= 1 && Cooldown <= 0)
+                {
+                    Cooldown = MaxCooldown;
+                    if (pasos == 0)
+                    {
+                        vectorDP1.x *= -1;
+                        vectorDP1.y += 1.15f;
+                        personaje.transform.position = vectorDP1;
+                    }
+
+                    if (pasos == 1)
+                    {
+                        vectorDP2.x *= -1;
+                        vectorDP2.y += 2.8f;
+                        personaje.transform.position = vectorDP2;
+                    }
+
+                    pasos++;
+                    //StartCoroutine(Example());
+
+                }
+                else if(pasos == 2)
+                {
+                    if (plataforma)
+                    {
+                        personaje.transform.Rotate(0f, 180f, 0f);
+                    }
+                    else if (!plataforma)
+                    {
+                        personaje.transform.Rotate(0f, 0f, 0f);
+                    }
+                    pasos = 0;
+                    turno = eTurno.TurnoJugador;
+                }
+                //StartCoroutine(Example());
+                //turno = eTurno.TurnoJugador;
+                break;
+        }
+    }
+    IEnumerator Example()
+    {
+        if (pasos <= 1 && Cooldown<=0f)
+        {
+            Cooldown = MaxCooldown;
+            if (pasos == 0)
+            {
+                vectorDP1.x *= -1;
+                vectorDP1.y += 1.15f;
+                personaje.transform.position = vectorDP1;
+                //yield return new WaitForSeconds(2);
+            }
+
+            if (pasos == 1)
+            {
+                vectorDP2.x *= -1;
+                vectorDP2.y += 2.8f;
+                personaje.transform.position = vectorDP2;
+                //yield return new WaitForSeconds(2);
+            }
+
+            pasos++;
+            //StartCoroutine(Example());
+
+        }
+        else
+        {
+            pasos = 0;
+            turno = eTurno.TurnoJugador;
+        }
+        print(Time.time);
+        yield return new WaitForSeconds(10);
+        print(Time.time);
     }
 
 }
