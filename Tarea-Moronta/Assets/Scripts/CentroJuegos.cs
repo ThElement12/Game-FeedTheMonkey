@@ -41,6 +41,7 @@ public class CentroJuegos : MonoBehaviour
     Vector3 vectorGM;
     Vector3 vectorDP1;
     Vector3 vectorDP2;
+    Vector3 vectorMC;
     int pasos = 0;
 
     // Start is called before the first frame update
@@ -53,6 +54,7 @@ public class CentroJuegos : MonoBehaviour
        vectorGM = new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y, 3);
        vectorDP1 = new Vector3(1.48f, -0.9183253f);
         vectorDP2 = new Vector3(8f,0);
+        vectorMC = new Vector3(0, 1.05f,-10f);
        
     }
 
@@ -213,13 +215,15 @@ public class CentroJuegos : MonoBehaviour
                     }
                     pasos = 0;
                     turno = eTurno.TurnoJugador;
+                    vectorMC.y += 6.45f;
+                    GameObject.Find("Main Camera").transform.position = vectorMC;
                 }
                 //StartCoroutine(Example());
                 //turno = eTurno.TurnoJugador;
                 break;
         }
     }
-    IEnumerator Example()
+   /* IEnumerator Example()
     {
         if (pasos <= 1 && Cooldown<=0f)
         {
@@ -252,6 +256,6 @@ public class CentroJuegos : MonoBehaviour
         print(Time.time);
         yield return new WaitForSeconds(10);
         print(Time.time);
-    }
+    }*/
 
 }
