@@ -7,6 +7,7 @@ public class Disparar : MonoBehaviour
     // Start is called before the first frame update
 
     public float BSpeedX = 4f;
+    bool derecha = true;
     public float BSpeedY = 4f;
     GameObject banana;
     public GameObject proyectil;
@@ -31,8 +32,9 @@ public class Disparar : MonoBehaviour
         miPadre = GameObject.Find("Disparador");
         banana = Instantiate(proyectil, new Vector3(miPadre.transform.position.x, miPadre.transform.position.y, miPadre.transform.position.z), miPadre.transform.rotation);
 
-        banana.GetComponent<Rigidbody>().AddForce(miPadre.transform.rotation * new Vector3(gameObject.transform.position.x * -5, gameObject.transform.position.y)
+        banana.GetComponent<Rigidbody>().AddForce(miPadre.transform.rotation * new Vector3(gameObject.transform.position.x * (derecha ? -5: 5), gameObject.transform.position.y)
         , ForceMode.Impulse);
+        derecha = !derecha;
         banana.transform.parent = null;
     }
     public void dispararPoop()
