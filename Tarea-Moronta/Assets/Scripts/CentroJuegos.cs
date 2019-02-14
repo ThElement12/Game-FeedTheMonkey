@@ -31,6 +31,7 @@ public class CentroJuegos : MonoBehaviour
     public GameObject mapaNorm;
     public GameObject mapaInv;
     GameObject nextMap;
+    GameObject actualMap;
     bool mapGen = false;
     int mapGenNum = 0;
     bool plataforma = true;
@@ -42,6 +43,7 @@ public class CentroJuegos : MonoBehaviour
     Vector3 vectorDP1;
     Vector3 vectorDP2;
     Vector3 vectorMC;
+    Vector3 vectorNM;
     int pasos = 0;
 
     // Start is called before the first frame update
@@ -55,6 +57,7 @@ public class CentroJuegos : MonoBehaviour
        vectorDP1 = new Vector3(1.48f, -0.9183253f);
         vectorDP2 = new Vector3(8f,0);
         vectorMC = new Vector3(0, 1.05f,-10f);
+
        
     }
 
@@ -70,9 +73,9 @@ public class CentroJuegos : MonoBehaviour
                     vectorGM.y += 4.04f;
                     if (!mapGen)
                     {
-                        nextMap = Instantiate(mapaInv);
-                        nextMap.transform.position = vectorGM;
-                        enemy = nextMap.transform.GetChild(3).gameObject;
+                        actualMap = Instantiate(mapaInv);
+                        actualMap.transform.position = vectorGM;
+                        enemy = actualMap.transform.GetChild(3).gameObject;
                         enemy.SetActive(false);
                         //mapGen = true;
                     }
@@ -217,6 +220,31 @@ public class CentroJuegos : MonoBehaviour
                     turno = eTurno.TurnoJugador;
                     vectorMC.y += 6.45f;
                     GameObject.Find("Main Camera").transform.position = vectorMC;
+
+                    actualMap.transform.position = new Vector3(actualMap.transform.position.x, actualMap.transform.position.y, 0f);
+                    enemy = actualMap.transform.GetChild(3).gameObject;
+                    enemy.SetActive(true);
+                    actualMap = nextMap;
+                    vectorGM.y += 4.04f;
+                    if (mapGen)
+                    {
+                        //Vector3 mivector = new Vector3(0.12f, nextMap.transform.position.y + 4.04f, 3);
+                        nextMap = Instantiate(mapaNorm);
+                        nextMap.transform.position = vectorGM; //new Vector3(0.12f, GameObject.Find("Mapa 1").transform.position.y + 4.04f, 3);
+                        enemy = nextMap.transform.GetChild(3).gameObject;
+                        enemy.SetActive(false);
+                        //mapGen = false;
+                    }
+                    
+                    if (!mapGen)
+                    {
+                        actualMap = Instantiate(mapaInv);
+                        actualMap.transform.position = vectorGM;
+                        enemy = actualMap.transform.GetChild(3).gameObject;
+                        enemy.SetActive(false);
+                        //mapGen = true;
+                    }
+                    mapGen = !mapGen;
                 }
                 //StartCoroutine(Example());
                 //turno = eTurno.TurnoJugador;
